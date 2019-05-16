@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    currentBuild.displayName = BRANCH_NAME
+                    currentBuild.displayName = "SimpelApplication"
                     currentBuild.description = "The best description."
                 }
                 sh 'mvn -B -DskipTests clean package'
