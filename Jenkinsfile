@@ -8,6 +8,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                script {
+                    currentBuild.displayName = "Test application"
+                    currentBuild.description = "The best description."
+                }
                 sh 'mvn -B -DskipTests clean package'
             }
         }
